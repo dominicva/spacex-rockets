@@ -2,13 +2,17 @@ import rocketData from './js/data';
 import './css/index.css';
 
 async function component() {
-  const element = document.createElement('div');
+  try {
+    const element = document.createElement('div');
 
-  const data = await rocketData();
+    const data = await rocketData();
 
-  element.innerHTML = JSON.stringify(data, null, 2);
+    element.innerHTML = JSON.stringify(data, null, 2);
 
-  return element;
+    return element;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 component().then(el => document.body.append(el));
