@@ -1,4 +1,5 @@
 import rocketData from './js/data';
+import './css/index.css';
 
 async function component() {
   const element = document.createElement('div');
