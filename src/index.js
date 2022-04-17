@@ -7,7 +7,11 @@ async function component() {
 
     const data = await rocketData();
 
-    element.innerHTML = JSON.stringify(data, null, 2);
+    const html = data.map(
+      rocket => `<section>${JSON.stringify(rocket)}</section>`
+    );
+
+    element.innerHTML = html.join('');
 
     return element;
   } catch (error) {
@@ -15,4 +19,8 @@ async function component() {
   }
 }
 
-component().then(el => document.body.append(el));
+async function app() {
+  document.body.append(await component());
+}
+
+app();
