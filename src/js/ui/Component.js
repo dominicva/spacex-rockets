@@ -5,9 +5,6 @@ export default function Component(type = 'div', props = {}, ...children) {
 
   if (propEntries.length > 0) {
     for (const [key, value] of propEntries) {
-      console.log('key:', key);
-      console.log('value:', value);
-
       element.setAtrribute(key, value);
     }
   }
