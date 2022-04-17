@@ -12,7 +12,9 @@ export default function Component(type = 'div', props = {}, ...children) {
     }
   }
 
-  if (children.length > 0) {
+  if (children.length === 1) {
+    element.innerHTML = children[0];
+  } else if (children.length > 1) {
     for (const child of children) {
       element.append(child);
     }
