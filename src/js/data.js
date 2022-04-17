@@ -1,16 +1,18 @@
-import fetch from 'node-fetch';
+export default async function rocketData() {
+  const response = await getData();
+  return parseData(response);
+}
 
-const { log, error } = console;
+async function getData() {
+  const API_URL = 'https://api.spacexdata.com/v4/rockets';
 
-const API_URL = 'https://api.spacexdata.com/v4/rockets';
-
-const getData = async url =>
-  await fetch(url)
+  return await fetch(API_URL)
     .then(r => r.json())
-    .catch(error);
+    .catch(console.error);
+}
 
-const parseData = data =>
-  data.map(
+function parseData(data) {
+  return data.map(
     ({
       name,
       active,
@@ -61,6 +63,4 @@ const parseData = data =>
       secondStageEngines,
     })
   );
-
-const parsed = await getData(API_URL).then(parseData);
-log(parsed);
+}
