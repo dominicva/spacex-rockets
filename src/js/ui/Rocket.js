@@ -33,7 +33,7 @@ export default function Rocket({
   </ul>
   `;
 
-  const parentElement = Component('section', {}, html);
+  const parentElement = Component('section', { class: 'rocket' }, html);
 
   return parentElement;
 }

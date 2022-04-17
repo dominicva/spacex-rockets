@@ -6,6 +6,6 @@ import './css/index.css';
 
 (async () => {
   const rockets = await rocketData().then(data => data.map(Rocket));
-  const app = Component('div', {}, ...rockets);
+  const app = Component('div', { id: 'root' }, ...rockets);
   render(app, document.body);
 })();
