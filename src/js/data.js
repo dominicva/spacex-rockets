@@ -4,11 +4,12 @@ export default async function rocketData() {
 }
 
 async function getData() {
-  const API_URL = 'https://api.spacexdata.com/v4/rockets';
-
-  return await fetch(API_URL)
-    .then(r => r.json())
-    .catch(console.error);
+  try {
+    const API_URL = 'https://api.spacexdata.com/v4/rockets';
+    return await fetch(API_URL).then(r => r.json());
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function parseData(data) {
