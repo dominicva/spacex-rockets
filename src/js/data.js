@@ -1,6 +1,5 @@
 export default async function rocketData() {
   const response = await getData();
-
   return parseData(response);
 }
 
@@ -19,7 +18,7 @@ async function getData() {
 
     return data;
   } catch (error) {
-    console.error(error);
+    console.error(`Error fetching rockets data: ${error}`);
   }
 }
 
