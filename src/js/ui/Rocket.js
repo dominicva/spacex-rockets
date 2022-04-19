@@ -26,8 +26,9 @@ export default function Rocket({
   const html = `
   <h2>${name}</h2>
 
-  <div class="background" style="background-image: url(${images[0]})">
-    <ul class="rocket-info">
+  <div class="rocket__background" style="background-image: url(${images[0]})">
+    <button class="rocket__button">learn more</button>
+    <ul class="rocket__info">
       <li>Status: ${active ? 'active' : 'inactive'}</li>
       <li>Stages: ${stages}</li>
       <li>Boosters: ${boosters}</li>

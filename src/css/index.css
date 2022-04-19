@@ -19,13 +19,22 @@ ul {
   list-style-type: none;
 }
 
-.background {
+.rocket {
+  padding: 2rem 0;
+}
+
+.rocket__background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 67% 50%;
   overflow: hidden;
 }
 
-.rocket-info {
+.rocket__button {
+  text-transform: uppercase;
+}
+
+.rocket__info {
   transform: translateY(120%);
+  background-color: #000;
 }
