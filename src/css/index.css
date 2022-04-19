@@ -1,7 +1,31 @@
 * {
   box-sizing: border-box;
+  /* border: 0.5px orangered solid; */
 }
 
-section {
-  padding: 1rem;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font: 16px/26px Arial, Verdana, sans-serif;
+  /* font-weight: 400; */
+  /* font-style: normal; */
+  /* text-align: left; */
+  color: #fff;
+  /* width: 100%; */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 67% 50%;
+  overflow: hidden;
+}
+
+.rocket-info {
+  transform: translateY(120%);
 }
