@@ -61,7 +61,5 @@ export default function Rocket({
   </div>
   `;
 
-  const parentElement = Component('section', { class: 'rocket' }, html);
-
-  return parentElement;
+  return Component('section', { class: 'rocket' }, html);
 }
